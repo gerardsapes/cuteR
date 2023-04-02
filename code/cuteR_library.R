@@ -266,7 +266,7 @@ cuteboxes <- function(data,group,yvar,xlab,title,colors,colors_line) {
     
     ggplot2::ggplot(data,aes(group,yvar))+
       ggplot2::geom_boxplot(aes(fill=group),lwd= 0.71, size=0.2,alpha=.5, notch = F,color= colors_line[1:length(levels(group))])+ ###SIGNIFICANCE SWITCH
-      ggplot2::geom_signif(comparisons=CN[gr], textsize = 5, vjust = 0.7, 
+      ggsignif::geom_signif(comparisons=CN[gr], textsize = 5, vjust = 0.7, 
                   step_increase=0.12, annotation= statistics$map_signif[gr])+
       ggplot2::geom_jitter(aes(color=group),size=2,alpha=.3)+
       #ggplot2::coord_flip()+
@@ -303,15 +303,16 @@ cuteboxes <- function(data,group,yvar,xlab,title,colors,colors_line) {
 
 
 # #Execution example of cuteboxes with stats
-# data <- data13
+# stats_file_path <- ""  #a string where the csv file with stats should be stored
+# data <- data13   #a dataframe
 # group <- data13$IntFac2 #Grouping used for coloring and statistics. WILL FAIL IF a treatment name starts with a number. Use "_" instead of spaces.
-# variable <- data13$D13_Stem
+# yvar <- data13$D13_Stem
 # title <- '' #Title of graph. Leave as is if you don't want one
 # xlab <- 'Delta 13C Stems'
 # 
 # statistics<-stats(data,yvar,group,stats_file_path,comparisons = NULL)
 # gr <-statistics$Pr...t.. <= 0.05
-# cuteboxes(data,group,variable,xlab,title,colors,colors_line)
+# cuteboxes(data,group,yvar,xlab,title,colors,colors_line)
 
 
 
