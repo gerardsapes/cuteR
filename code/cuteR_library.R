@@ -202,7 +202,7 @@ cuteboxes <- function(data,group,variable,xlab,title) {
 
 ##Execution example of cuteboxes without stats
 #data <- data
-#group <- data$Race #Grouping used for coloring (this one was a bit racist...)
+#group <- data$Race #Grouping used for coloring 
 #variable <- data$Plant_length_cm
 #title <- '' #Title of graph. Leave as is if you don't want one
 #xlab <- 'Plant Length (Cm)'
@@ -376,7 +376,7 @@ meanregs <- function(data,xvar,sd_xvar,yvar,sd_yvar,group,method,formula,family,
 #sd_xvar <- 0 #standard deviation or standard error values for xvariable (previously calculated using summarySE function)
 #yvar <- stem_condy$Stem_Conductivity_mmol.s.1.MPA.1.m.1
 #sd_yvar <- stem_condy$sd #standard deviation or standard error values for xvariable (previously calculated using summarySE function)
-#group <- stem_condy$Race #Grouping used for coloring (this one was a bit racist...)
+#group <- stem_condy$Race #Grouping used for coloring 
 #xlab <- 'Days since onset of drought'
 #ylab <- 'Stem K (mmol.s.1.MPA.1.m.1)'
 #title <- '' #Title of graph. Leave as is if you don't want one
